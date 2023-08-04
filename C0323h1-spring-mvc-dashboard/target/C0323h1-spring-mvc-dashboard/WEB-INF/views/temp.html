@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<th:block th:replace="layout/head"/>
+<body>
+
+<!-- Begin page -->
+<div id="wrapper">
+
+    <!-- Topbar Start -->
+    <th:block th:replace="layout/topbar"/>
+    <!-- end Topbar -->
+
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <th:block th:replace="layout/left-bar"/>
+    <!-- Left Sidebar End -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <th:block th:replace="layout/footer"/>
+    <!-- end Footer -->
+
+</div>
+
+<!-- ============================================================== -->
+<!-- End Page content -->
+<!-- ============================================================== -->
+
+<!-- END wrapper -->
+
+<!-- Right Sidebar -->
+<th:block th:replace="layout/right-bar"/>
+
+
+<!-- Vendor js -->
+<th:block th:replace="layout/script"/>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<th:block th:replace="layout/head"/>
+<body>
+
+<!-- Begin page -->
+<div id="wrapper">
+
+    <!-- Topbar Start -->
+    <th:block th:replace="layout/topbar"/>
+    <!-- end Topbar -->
+
+
+    <!-- ========== Left Sidebar Start ========== -->
+    <th:block th:replace="layout/left-bar"/>
+    <!-- Left Sidebar End -->
+
+
+
+
+    <div class="content-page">
+        <div class="content">
+
+            <!-- Start Content-->
+            <div class="container-fluid">
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Minton</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Apps</a></li>
+                                    <li class="breadcrumb-item active">List of customers</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">List of customers</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <div class="content">
+                    <form method="post">
+                        <div class="row mt-3">
+                            <div class="col-lg-6">
+                                <label class="fw-bolder">Full name</label>
+                                <input type="text" class="form-control" name="fullName">
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="fw-bolder">Email</label>
+                                <input type="text" class="form-control" name="email">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-6">
+                                <label class="fw-bolder">Phone</label>
+                                <input type="tel" class="form-control" name="phone">
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="fw-bolder">Address</label>
+                                <input type="text" class="form-control" name="address">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-3">
+                                <button type="submit" class="btn btn-outline-primary">
+                                    <i class="fas fa-plus-circle"></i>
+                                    Create
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+    </div>
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <th:block th:replace="layout/footer"/>
+    <!-- end Footer -->
+
+</div>
+
+<!-- ============================================================== -->
+<!-- End Page content -->
+<!-- ============================================================== -->
+
+<!-- END wrapper -->
+
+<!-- Right Sidebar -->
+<th:block th:replace="layout/right-bar"/>
+
+
+<!-- Vendor js -->
+<th:block th:replace="layout/script"/>
+
+</body>
+</html>
