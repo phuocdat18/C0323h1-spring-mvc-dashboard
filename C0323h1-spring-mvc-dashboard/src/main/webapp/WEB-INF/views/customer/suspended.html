@@ -6,93 +6,87 @@
 <!-- Begin page -->
 <div id="wrapper">
 
-  <!-- Topbar Start -->
-  <th:block th:replace="layout/topbar"/>
-  <!-- end Topbar -->
+    <!-- Topbar Start -->
+    <th:block th:replace="layout/topbar"/>
+    <!-- end Topbar -->
 
 
-  <!-- ========== Left Sidebar Start ========== -->
-  <th:block th:replace="layout/left-bar"/>
-  <!-- Left Sidebar End -->
+    <!-- ========== Left Sidebar Start ========== -->
+    <th:block th:replace="layout/left-bar"/>
+    <!-- Left Sidebar End -->
 
 
-
-
-  <div class="content-page">
-    <div class="content">
-
-      <!-- Start Content-->
-      <div class="container-fluid">
-
-        <!-- start page title -->
-        <div class="row">
-          <div class="col-12">
-            <div class="page-title-box">
-              <div class="page-title-right">
-                <ol class="breadcrumb m-0">
-                  <li class="breadcrumb-item"><a href="javascript: void(0);">Minton</a></li>
-                  <li class="breadcrumb-item"><a href="javascript: void(0);">Apps</a></li>
-                  <li class="breadcrumb-item active">List of customers</li>
-                </ol>
-              </div>
-              <h4 class="page-title">List of customers</h4>
-            </div>
-          </div>
-        </div>
-        <!-- end page title -->
-
+    <div class="content-page">
         <div class="content">
-          <form method="post" autocomplete="off" th:object="${currentCustomer}">
-            <div class="row mt-3">
-              <input th:type="hidden" name="id" th:field="*{id}">
-              <div class="col-md-6 mb-3">
-                <label for="fullName" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="fullName" name="name"
-                       th:value="*{fullName}" th:field="*{fullName}" readonly>
-              </div>
-              <div hidden="true" class="col-md-6 mb-3">
-                <label for="balance" class="form-label">Balance</label>
-                <input type="text" class="form-control" id="balance" name="balance"
-                       th:value="*{balance}" th:field="*{balance}" readonly>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email"
-                       th:value="*{email}" th:field="*{email}" readonly>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="text" class="form-control" id="phone" name="phone"
-                       th:value="*{phone}" th:field="*{phone}" readonly>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="address" class="form-label">Address</label>
-                <input type="text" class="form-control" id="address" name="address"
-                       th:value="*{address}" th:field="*{address}" readonly>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-outline-danger">
-              <i class="fas fa-ban"></i>
-              Suspend
-            </button>
-          </form>
-        </div>
 
-      </div> <!-- container -->
+            <!-- Start Content-->
+            <div class="container-fluid">
 
-    </div> <!-- content -->
-  </div>
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-title-box">
+                            <div class="page-title-right">
+                                <ol class="breadcrumb m-0">
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Minton</a></li>
+                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Apps</a></li>
+                                    <li class="breadcrumb-item active">List of customers</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">List of customers</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- end page title -->
+
+                <div class="content">
+                    <form method="post" autocomplete="off" th:object="${currentCustomer}">
+                        <div class="row mt-3">
+                            <input th:type="hidden" name="id" th:field="*{id}">
+                            <div class="col-md-6 mb-3">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" name="name"
+                                       th:value="*{fullName}" th:field="*{fullName}" readonly>
+                            </div>
+                            <div hidden="true" class="col-md-6 mb-3">
+                                <label for="balance" class="form-label">Balance</label>
+                                <input type="text" class="form-control" id="balance" name="balance"
+                                       th:value="*{balance}" th:field="*{balance}" readonly>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                       th:value="*{email}" th:field="*{email}" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" id="phone" name="phone"
+                                       th:value="*{phone}" th:field="*{phone}" readonly>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="address" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="address" name="address"
+                                       th:value="*{address}" th:field="*{address}" readonly>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-outline-danger">
+                            <i class="fas fa-ban"></i>
+                            Suspend
+                        </button>
+                    </form>
+                </div>
+
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+    </div>
 
 
-
-
-
-
-  <!-- Footer Start -->
-  <th:block th:replace="layout/footer"/>
-  <!-- end Footer -->
+    <!-- Footer Start -->
+    <th:block th:replace="layout/footer"/>
+    <!-- end Footer -->
 
 </div>
 
