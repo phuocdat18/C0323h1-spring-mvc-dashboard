@@ -12,11 +12,6 @@ public class HomeController {
         return "index";
     }
 
-//    @GetMapping("/create")
-//    public String showCreatePage() {
-//
-//    }
-
     @GetMapping("/test")
     public String showTestPage() {
         return "temp";
